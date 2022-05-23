@@ -1,10 +1,8 @@
-# Measuring temperature with DS18B20 - 2022-05-20
+# Measuring temperature with DS18B20 - 2022-05-18
 
 import time
 import board
 from adafruit_onewire.bus import OneWireBus
-
-counter = 0
 ow_bus = OneWireBus(board.D2)
 
 devices = ow_bus.scan()
@@ -19,11 +17,10 @@ sensor1 = adafruit_ds18x20.DS18X20(ow_bus, devices[1])
 sensor2 = adafruit_ds18x20.DS18X20(ow_bus, devices[2])
 
 while True:
-    print('Temperature: {0:0.3f} °C'.format(sensor0.temperature),end='')
-    print(', {0:0.3f} °C'.format(sensor1.temperature),end='')
-    print(', {0:0.3f} °C, '.format(sensor2.temperature),end='')
-    print(counter)
-    counter += 1
-    time.sleep(2.0)
+    print('Temperature: {0:0.3f} °C'.format(sensor0.temperature))
+    print('Temperature: {0:0.3f} °C'.format(sensor1.temperature))
+    print('Temperature: {0:0.3f} °C'.format(sensor2.temperature))
+    print('.')
+    time.sleep(1.0)
 
 
