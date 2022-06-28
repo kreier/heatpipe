@@ -44,4 +44,7 @@ while True:
 
 ## Results
 
-Graph follows.
+With Cinebench 23 on loop the internal two temperature sensors were measured with OpenSensor and plottet, while the Adafruit Metro Express M0 transmitted the temperature data of the 3 sensors to MU, running on the PC:
+
+![screenshot temperature curves](temperature_curve.jpg)
+
